@@ -9,7 +9,7 @@ from base.workload_parser import parse_lines
 from base.prototype import _job_inputs_to_jobs
 from schedulers.simulator import run_simulator
 import optparse
-from schedulers.multi_dimen_reverse_double_easy_scheduler import MultiDimenReverseDoubleScheduler
+from schedulers.multi_dimen_double_easy_scheduler import MultiDimenDoubleEasyScheduler
 
 
 def parse_options():
@@ -50,8 +50,8 @@ def main():
     else:
         input_file = open(options.input_file)
 
-    if options.scheduler == "MultiDimenReverseDoubleScheduler" or options.scheduler == "1":
-        scheduler = MultiDimenReverseDoubleScheduler(options.num_processors, options.num_memory)
+    if options.scheduler == "MultiDimenDoubleEasyScheduler" or options.scheduler == "1":
+        scheduler = MultiDimenDoubleEasyScheduler(options.num_processors, options.num_memory)
 
     else:
         print "No such scheduler"

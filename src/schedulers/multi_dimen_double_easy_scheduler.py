@@ -3,7 +3,7 @@ __author__ = 'bluesky'
 from common import list_copy, ResourceSnapshot
 from base.prototype import JobStartEvent
 
-class MultiDimenReverseDoubleScheduler(object):
+class MultiDimenDoubleEasyScheduler(object):
     def __init__(self, num_processors, num_memory):
         self.num_processors = num_processors
         self.num_memory = num_memory
